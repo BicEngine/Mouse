@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Bic\Mouse;
 
 /**
- * @psalm-type ButtonID = positive-int|0
+ * @psalm-type ButtonID = int<0, max>
+ * @phpstan-type ButtonID int<0, max>
  */
 interface ButtonInterface
 {

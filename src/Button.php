@@ -12,9 +12,6 @@ enum Button: int implements ButtonInterface
     case X1 = 3;
     case X2 = 4;
 
-    /**
-     * {@inheritDoc}
-     */
     public function getId(): int
     {
         return $this->value;

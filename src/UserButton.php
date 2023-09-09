@@ -6,12 +6,12 @@ namespace Bic\Mouse;
 
 /**
  * @psalm-import-type ButtonID from ButtonInterface
+ * @phpstan-import-type ButtonID from ButtonInterface
  */
 final class UserButton implements ButtonInterface
 {
     /**
-     * @var array<int, self>
-     * @psalm-var array<ButtonID, self>
+     * @var array<ButtonID, self>
      */
     private static array $instances = [];
 
@@ -24,7 +24,7 @@ final class UserButton implements ButtonInterface
     }
 
     /**
-     * @psalm-return ButtonID
+     * @return ButtonID
      */
     public function getId(): int
     {
