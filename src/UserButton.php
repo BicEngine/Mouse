@@ -33,7 +33,6 @@ final class UserButton implements ButtonInterface
 
     /**
      * @param ButtonID $id
-     * @return ButtonInterface
      */
     public static function create(int $id): ButtonInterface
     {
