@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Bic\Mouse;
 
+/**
+ * @psalm-import-type ButtonID from ButtonInterface
+ * @phpstan-import-type ButtonID from ButtonInterface
+ */
 enum Button: int implements ButtonInterface
 {
     case LEFT = 0;
@@ -15,5 +19,13 @@ enum Button: int implements ButtonInterface
     public function getId(): int
     {
         return $this->value;
+    }
+
+    /**
+     * @param ButtonID $id
+     */
+    public static function create(int $id): ButtonInterface
+    {
+        return self::tryFrom($id) ?? UserButton::create($id);
     }
 }

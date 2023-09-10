@@ -11,12 +11,14 @@ namespace Bic\Mouse;
 final class UserButton implements ButtonInterface
 {
     /**
-     * @var array<ButtonID, self>
+     * @var array<ButtonID, ButtonInterface>
      */
     private static array $instances = [];
 
     /**
      * @param ButtonID $id
+     *
+     * @internal Please use {@see UserButton::create()} instead.
      */
     private function __construct(
         private readonly int $id,
